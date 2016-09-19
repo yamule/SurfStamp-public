@@ -1,1 +1,151 @@
-test
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>TODO supply a title</title>
+		<style type="text/css">
+		<!--
+		body {line-height: 130%;font-size:130%}
+		h2 {margin-top:120px;margin-bottom:20px}
+		h3 {margin-top:60px;margin-bottom:20px}
+		div.desc {margin-right:60px;margin-left:20px}
+		blockquote {border-style:dashed;border-width:2px;padding:8px;padding-left:12px;background-color:#DDDDFF;font-size:100%;white-space:nowrap;}
+		-->
+		</style>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	</head>
+		<body>
+		<div style="margin-left: 10%;margin-right: 10%;">
+			<h1>SurfStamp</h1>
+			<center><img src="https://raw.githubusercontent.com/yamule/SurfStamp-public/master/docs/img/header.png"></center>
+			<div class="desc">
+				 SurfStamp is an application to generate textures for surface models of proteins. The information of residues; residue types and numbers are drawn directly on the 3D objects. This approach is more intuitive than the labeling functions that most of 3D structure viewers use to show residue information. 
+				 <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Thus, with this application, researchers, readers or audiences can easily distinguish which residues are contributing the surface they are focusing on. 
+			</div>
+			<h2>Download:</h2>
+			
+			<h2>Usage:</h2>
+			
+			<div class="desc">
+			<div>
+				SurfStamp cannot create surface model by itself. You should make surface model with some other software.<br>
+				Please use tips for detail.<br>
+				<div class="desc">
+				<a href="#tips_pymolcui">PyMol (CUI)</a><br>
+				<a href="#tips_pymolgui">PyMol (GUI)</a><br>
+				<a href="#tips_edtsurf">EDTSurf (CUI)</a><br>
+				</div>
+				<br>
+				SurfStamp is coded 100% Java language. You can run it on any OS as long as JavaVM was installed.<br>
+				Example command is as follows.
+			</div>
+			<blockquote>
+				java -jar SurfStamp.jar -pdb 3zsj_prot.pdb -ply 3zsj_prot.ply -nowater -ligand 3zsj_ligand.pdb -out 3zsj_example.obj -color_scheme 0 -image_size 4096
+			</blockquote>
+			<div>
+				3zsj_prot.pdb: ATOM record of the protein (Galectin-3 CRD) in 3ZSJ.pdb.<br>
+				3zsj_prot.ply: Polygon format file made by EDTSurf from 3zsj_prot.pdb.<br>
+				3zsj_ligandt.pdb: HETATM record of the BETA-LACTOSE in 3ZSJ.pdb.<br>
+			</div>
+			</div>
+<h2>OutputExample:</h2>
+
+		<div class="desc">
+		<center>
+<img src="https://raw.githubusercontent.com/yamule/SurfStamp-public/master/docs/img/Figure1a.png" width="400px"><br>
+3D object of 3ZSJ made with the above command.<br><br><br>
+<img src="https://raw.githubusercontent.com/yamule/SurfStamp-public/master/docs/img/Figure1b.png" width="400px"><br>
+You can see the residues interacting with ligands at a glance.<br>
+<br><br>
+
+
+<img src="https://raw.githubusercontent.com/yamule/SurfStamp-public/master/docs/img/pymol_similar_s.png" width="400px"><br>
+I did my best to make the same object using PyMol.
+<br>
+<br>
+<br>
+
+<img src="https://raw.githubusercontent.com/yamule/SurfStamp-public/master/docs/img/3DF6_A_normal_thrcluster.png" width="400px"><br>
+Another example: 3D object of 3DF6 (chain A).<br>There is a Threonine cluster... Is it phospholylated?<br>
+SurfStamp will provide clues for further experiments like this.<br><br><br>
+<img src="https://raw.githubusercontent.com/yamule/SurfStamp-public/master/docs/img/3DF6_A_noborder_cpk.png" width="400px"><br>
+
+
+
+Another example2: CPK coloring (-color_scheme 3) of 3DF6 (chain A).<br>
+</center>
+</div>
+
+		<h2>Tips:</h2>
+		<a id="tips_pymolcui" name="tips_pymolcui"></a>
+		<h3>Making 3D geometry (.obj file) with PyMol(CUI).</h3>
+		
+		<div class="desc">
+		If you can use PyMol from terminal.<br>
+		ref: <a href="https://www.biostars.org/p/42474/" target="blank">https://www.biostars.org/p/42474/</a><br>
+		<a href="https://pymolwiki.org/index.php/Launching_From_a_Script"  target="blank">https://pymolwiki.org/index.php/Launching_From_a_Script</a><br>
+		
+<br>
+		1. Save following script as "objmake.py".<br>
+		<blockquote>
+			import __main__<br>
+			__main__.pymol_argv = [ 'pymol', '-qc'] <br>
+<br>
+			import sys, time, os<br>
+			import pymol<br>
+			from chempy import models, cpv<br>
+<br>
+<br>
+			pymol.finish_launching()<br>
+<br>
+<br>
+			spath = sys.argv[1]<br>
+<br>
+			sname = spath.split('/')[-1].split('.')[0]<br>
+			# Load Structures<br>
+			print(spath);<br>
+			pymol.cmd.load(spath,sname);<br>
+			pymol.cmd.hide("all");<br>
+			pymol.cmd.show("surface");<br>
+			pymol.cmd.reset();<br>
+			pymol.cmd.origin(position=[0.0,0.0,0.0]);<br>
+			# pymol.cmd.center(origin = 0);<br>
+			pymol.cmd.pseudoatom("pseudo_",pos=[0,0,0]);<br>
+			pymol.cmd.select("psel","/pseudo_//P/PSD`1/PS1");<br>
+			pymol.cmd.center(selection="psel");<br>
+			pymol.cmd.save(sname+".obj");<br>
+			pymol.cmd.delete("all");<br>
+<br>
+<br>
+			pymol.cmd.quit()<br>
+		</blockquote>
+		2. Call "python objmake.py XXXX.pdb".<br>
+		3. XXXX.obj will be saved.
+		</div>
+		<a id="tips_pymolcui" name="tips_pymolgui"></a>
+		<h3 id="pymolgui">Making 3D geometry (.obj file) with PyMol(GUI).</h3>
+
+		<div class="desc">
+		1. Load XXXX.pdb.<br>
+		1-b. Do not perform any transform operation (rotate, translate, expand and so forth).<br>
+		2. Make surface model with [S]->surface.<br>
+		3. Input following command.<br>
+		<blockquote>
+			origin position=[0,0,0]<br>
+			center origin<br>
+			save XXXX.obj<br>
+		</blockquote>
+		4. XXXX.obj will be saved.
+		</div>
+		<a id="tips_edtsurf" name="tips_pymolgui"></a>
+		<h3>Make 3D geometry (.obj file) with EDTSurf.</h3>
+		<div class="desc">
+		Please follow the instruction of <a href="http://zhanglab.ccmb.med.umich.edu/EDTSurf/" target="blank">EDTSurf</a>.
+		</div>
+
+			<h2>License:</h2>
+			<a href="https://www.apache.org/licenses/LICENSE-2.0"  target="blank">Apache License Version 2.0</a>
+	</div><br><br><br>
+	<center>Copyright: yamule</center>
+	</body>
+</html>
