@@ -41,6 +41,7 @@
 			<div>
 				SurfStamp cannot create surface model by itself. You should make surface model with some other software.<br>
 				Please use tips for detail.<br>
+				(PyMol sometimes generates odd faces. EDTSurf does not construct surface of HETATM entry. Choose the one which matches your purpose.)
 				<div class="desc">
 				<a href="#tips_pymolcui">PyMol (CUI)</a><br>
 				<a href="#tips_pymolgui">PyMol (GUI)</a><br>
@@ -94,9 +95,9 @@ Another example2: CPK coloring (-color_scheme 3) of <a href="http://www.rcsb.org
 		<td><img src="https://raw.githubusercontent.com/yamule/SurfStamp-public/master/docs/img/inside_s.png" width="300px"></td>
 	</tr>
 	<tr>
-		<td>-color_scheme 1 & <br> -nooutline </td>
-		<td>-color_scheme 2 & <br> -nooutline </td>
-		<td>-lighteningwall</td>
+		<td>-color_scheme 1 & <br> -nooutline <br>(Hydrophobisity)</td>
+		<td>-color_scheme 2 & <br> -nooutline <br>(Isoelectric point)</td>
+		<td>-lighteningwall <br>(Lightening to reduce the cost of 3D print)</td>
 	</tr>
 	</table></center>
 </div>
