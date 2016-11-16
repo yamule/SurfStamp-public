@@ -46,6 +46,7 @@
 				<a href="#tips_pymolcui">PyMol (CUI)</a><br>
 				<a href="#tips_pymolgui">PyMol (GUI)</a><br>
 				<a href="#tips_edtsurf">EDTSurf (CUI)</a><br>
+				<a href="#tips_ucsfchimera">UCSF Chimera (CUI)</a><br>
 				</div>
 				<br>
 				SurfStamp is coded 100% Java language. You can run it on any OS as long as JavaVM was installed.<br>
@@ -206,10 +207,23 @@ Another example2: CPK coloring (-color_scheme 3) of <a href="http://www.rcsb.org
 		</blockquote>
 		4. XXXX.obj will be saved.
 		</div>
-		<a id="tips_edtsurf" name="tips_pymolgui"></a>
+		<a id="tips_edtsurf" name="tips_edtsurf"></a>
 		<h3>Make 3D geometry (.ply file) with EDTSurf.</h3>
 		<div class="desc">
 		Please follow the instruction of <a href="http://zhanglab.ccmb.med.umich.edu/EDTSurf/" target="blank">EDTSurf</a>.
+		</div>
+
+		<a id="tips_ucsfchimera" name="tips_ucsfchimera"></a>
+			<h3>Make 3D geometry (.obj file) with <a href="https://www.cgl.ucsf.edu/chimera/">UCSF Chimera</a>.</h3>
+		<div class="desc">
+		1. Load XXXX.pdb.<br>
+		2. Make surface model with Actions-&gt;Surface-&gt;Show .<br>
+		2-b. or enter "surf #0 grid 0.5" in the command line. Where 0 is the model number and 0.5 is the mesh size.<br>
+		3. Hide all other models with Actions-&gt;Atoms/Bonds-&gt;Hide and Actions-&gt;Ribbon-&gt;Hide .<br>
+		4. If you have rotated or moved the model, enter "reset" in the command line. <br>
+		&nbsp;(As I do not use UCSF Chimera frequently, the operation may not be enough. Please let me know if you can't make the model correctly.)<br>
+		5. Save the model with Export Scene-&gt; choose OBJ [.obj] in the File type pull down box. -&gt; enter filename and press Save.<br>
+		<br>I thank James Tyrwhitt Drake (NIH/NIAID) for instruction of UCSF Chimera.<br>
 		</div>
 
 			<h2>License:</h2>
