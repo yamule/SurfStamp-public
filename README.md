@@ -1,5 +1,4 @@
-# SurfStamp-public
-====================================　　
+# 3D Printer Compatible Surface Representation of Macromolecules
 
 ![example](https://raw.githubusercontent.com/yamule/SurfStamp-public/master/docs/img/isoelectricpoint_s.png)　　
 
