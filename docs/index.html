@@ -217,16 +217,17 @@ Another example2: CPK coloring (-color_scheme 3) of <a href="http://www.rcsb.org
 		<h3 id="pymolgui">Making 3D geometry (.obj file) with <a href="https://www.pymol.org/" target="blank">PyMol</a>(GUI).</h3>
 
 		<div class="desc">
-		1. Load XXXX.pdb.<br>
-		1-b. Do not perform any transform operation (rotate, translate, expand and so forth).<br>
-		2. Make surface model with [S]->surface.<br>
-		3. Input following command.<br>
+		1. Extract only ATOM and HETATM lines (with grep or manually) and save them as XXXX_atomlines.pdb or any names you want.<br>
+		2. Load XXXX_atomlines.pdb.<br>
+		2-b. Do not perform any transform operation (rotate, translate, expand and so forth).<br>
+		3. Make surface model with [S]->surface.<br>
+		4. Input following command.<br>
 		<blockquote>
 			origin position=[0,0,0]<br>
 			center origin<br>
 			save XXXX.obj<br>
 		</blockquote>
-		4. XXXX.obj will be saved.
+		5. XXXX.obj will be saved.
 		</div>
 		<a id="tips_edtsurf" name="tips_edtsurf"></a>
 		<h3>Make 3D geometry (.ply file) with EDTSurf.</h3>
