@@ -40,11 +40,10 @@
 			
 			<div class="desc">
 			<div>
-				SurfStamp generates surface model like molecular surface model by <a href="https://zhanglab.ccmb.med.umich.edu/EDTSurf/">EDTSurf</a>.<br>
-				You can use objects made by other software.<br>
-				Please be careful because some GUI type software generate objects according to their camera position.<br>
-				Please use tips for detail.<br>
-				(PyMol sometimes generates odd faces. EDTSurf does not construct surface of HETATM entry. Choose the one which matches your purpose.)
+				SurfStamp has function to generate surface model using procedure like <a href="https://zhanglab.ccmb.med.umich.edu/EDTSurf/">EDTSurf</a> (but a bit different, the difference may be introduced in future).<br>
+				In addition, you can also use models made by other software.<br>
+				But please be careful because some GUI type software generate objects according to their camera position.<br>
+				See tips↓ for detail.<br>
 				<div class="desc">
 				<a href="#tips_pymolcui">PyMol (CUI)</a><br>
 				<a href="#tips_pymolgui">PyMol (GUI)</a><br>
@@ -52,7 +51,7 @@
 				<a href="#tips_ucsfchimera">UCSF Chimera (GUI)</a><br>
 				</div>
 				<br>
-				SurfStamp is coded 100% Java language. You can run it on any OS as long as JavaVM was installed.<br>
+				SurfStamp is coded 100% Java language. You can run it on any OS as long as JavaVM is installed.<br>
 				Example command is as follows.
 			</div>
 			<blockquote>
@@ -61,6 +60,7 @@
 			<div>
 				3zsj_prot.pdb: ATOM record of the protein (Galectin-3 CRD) in <a href="http://www.rcsb.org/pdb/explore.do?structureId=3zsj" target="blank">3ZSJ</a>.pdb.<br>
 				3zsj_ligand.pdb: HETATM record of the BETA-LACTOSE in <a href="http://www.rcsb.org/pdb/explore.do?structureId=3zsj" target="blank">3ZSJ</a>.pdb.<br>
+				Please download Surfstamp_with_example.zip from <a href="https://github.com/yamule/SurfStamp-public/releases" target="blank">release page</a>. The files will be in it.
 			</div>
 			</div>
 <h2>OutputExample:</h2>
@@ -167,7 +167,7 @@ Another example2: CPK coloring (-color_scheme 3) of <a href="http://www.rcsb.org
 		<td align="center"></td>
 	</tr>
 	<tr>
-		<td>Result of <a href="http://www.poissonboltzmann.org/">APBS</a> (.ex file) can be imported with -color_dx option.</td>
+		<td>Result of <a href="http://www.poissonboltzmann.org/">APBS</a> (.dx file) can be imported with -color_dx option.</td>
 		<td>Of course it can be printed out by 3D printer! <a href="https://3dprint.nih.gov/discover/3DPX-008231">NIH 3D Print Exchange</a></td>
 		<td></td>
 	</tr>
@@ -260,7 +260,7 @@ Another example2: CPK coloring (-color_scheme 3) of <a href="http://www.rcsb.org
 		4. If you have rotated or moved the model, enter "reset" in the command line ([Tools]-&gt;[General controls]-&gt;[Command line])). <br>
 		&nbsp;(As I do not use UCSF Chimera frequently, the operation may not be enough. Please let me know if you can't make the model correctly.)<br>
 		5. Save the model with [File]-&gt;[Export Scene]-&gt; choose "OBJ [.obj]" in the File type combobox -&gt; enter filename and press [Save].<br>
-			<br>&nbsp;&nbsp;*I thank James Tyrwhitt Drake (NIH/NIAID) for instruction of UCSF Chimera.<br>
+			
 		</div>
 
 	<h2>License:</h2>
@@ -280,6 +280,8 @@ Another example2: CPK coloring (-color_scheme 3) of <a href="http://www.rcsb.org
 		See the License for the specific language governing permissions and<br>
 		limitations under the License.<br>
 	</div>
-	</div><br><br><br>
+	</div><br>
+	<br>&nbsp;&nbsp;I thank James Tyrwhitt Drake (NIH/NIAID) and staff of <a href="http://3dprint.nih.gov/">NIH 3D Print Exchange</a> for encouraging this work and helpful suggestions.<br>
+	<br><br>
 	</body>
 </html>
