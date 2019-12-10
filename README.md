@@ -15,3 +15,6 @@ https://github.com/yamule/SurfStamp-public/releases
 
 There are some example commands in the wiki page.
 https://github.com/yamule/SurfStamp-public/wiki
+
+Please try e_Simple3DView if you are not familiar with 3D graphics processing. (There are only windows binary, tho.)
+https://github.com/yamule/e_Simple3DView
