@@ -6,6 +6,10 @@ SurfStamp public release page 　　
 
 (Exact codes are managed as private.)　　
 
+Some automatically processed structures are available from
+http://process.sakura.ne.jp/surfstamp/viewer/test.cgi?pdbid=3ZSJ
+.
+
 Please access GitHub Page for introduction.　
 https://yamule.github.io/SurfStamp-public/
 
