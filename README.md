@@ -2,6 +2,7 @@
 
 ![example](https://raw.githubusercontent.com/yamule/SurfStamp-public/master/docs/img/apbs_example.png)　　
 
+Last Update 2020/01/22
 SurfStamp public release page 　　
 
 (Exact codes are managed as private.)　　
