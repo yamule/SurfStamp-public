@@ -1,4 +1,4 @@
-# 3D Printer Compatible Molecular Surface Representation (DO NOT CLONE! PLEASE SEE THE RELEASE PAGE!)
+# SurfStamp: 3D Printer Compatible Molecular Surface Representation (DO NOT CLONE! PLEASE SEE THE RELEASE PAGE!)
 
 ![example](https://raw.githubusercontent.com/yamule/SurfStamp-public/master/docs/img/apbs_example.png)　　
 
