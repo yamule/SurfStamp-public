@@ -27,4 +27,4 @@ https://github.com/yamule/e_Simple3DView
 
 
 A manuscript for citation has been posted to bioRxiv:
-https://www.biorxiv.org/content/10.1101/2020.10.29.360701v1
+https://www.biorxiv.org/content/10.1101/2020.10.29.360701v2
