@@ -274,7 +274,23 @@ Another example2: CPK coloring (-color_scheme 3) of <a href="http://www.rcsb.org
 		5. Save the model with [File]-&gt;[Export Scene]-&gt; choose "OBJ [.obj]" in the File type combobox -&gt; enter filename and press [Save].<br>
 			
 		</div>
-
+<br>
+<br>
+	<a id="tips_use_in_pymol" name="tips_pymolcui"></a>
+	<h3>How to see the structure with <a href="https://github.com/schrodinger/pymol-open-source">PyMOL</a>.</h3>
+	Download a script from <a href="https://gist.github.com/yamule/6167d538b8bad1a90c6c72d3f1c97adc">https://gist.github.com/yamule/6167d538b8bad1a90c6c72d3f1c97adc</a>
+	<div class="desc">
+		1. Save the script in the same directory with your OBJ.<br>
+		2. Launch PyMOL.<br>
+		3. Load this script from File-> Open (All Files (*))<br>
+		4. Type the following command in the command field (The text field which have PyMOL> label). <br>
+		cmd.load_callback(myOBJCallback("debug.obj"),'unique_name');<br>
+		5. I recommend you to load the structure which is the source of your OBJ file. Because this script does not change the camera position.<br>
+	</div>
+	I have run this script with PyMOL open source 2.5.0a0.
+<br>
+<br>
+			
 	<h2>License:</h2>
 	<div class="desc">
 
