@@ -8,6 +8,10 @@ SurfStamp public release page 　　
 
 (Exact codes are managed as private.)　　
 
+PyMOL plugin is now available.  
+https://github.com/yamule/SurfStamp-pymol-plugin  
+
+
 Some automatically processed structures are available from
 http://process.sakura.ne.jp/surfstamp/viewer/test.cgi?pdbid=3ZSJ
 .
