@@ -14,7 +14,7 @@ https://github.com/yamule/SurfStamp-pymol-plugin
 
 Some automatically processed structures are available from
 http://process.sakura.ne.jp/surfstamp/viewer/test.cgi?pdbid=3ZSJ
-. (The snapshot is a bit old which was synclonized in 2021 Jan. because the server strage is almost full.:rolling_eye:)
+. (The snapshot is a bit old which was synclonized in 2021 Jan. because the server strage is almost full.:rolling_eyes:)
 
 Please access GitHub Page for introduction.　
 https://yamule.github.io/SurfStamp-public/
