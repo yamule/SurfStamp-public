@@ -11,6 +11,8 @@ SurfStamp public release page 　　
 PyMOL plugin is now available.  
 https://github.com/yamule/SurfStamp-pymol-plugin  
 
+You can try structures in PDB with Hugging Face Space.  
+https://huggingface.co/spaces/yamule/SurfStampDemo
 
 Some automatically processed structures are available from
 http://process.sakura.ne.jp/surfstamp/viewer/test.cgi?pdbid=3ZSJ
