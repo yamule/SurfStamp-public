@@ -8,9 +8,6 @@ SurfStamp public release page 　　
 
 (Exact codes are managed as private.)　　
 
-PyMOL plugin is now available.  
-https://github.com/yamule/SurfStamp-pymol-plugin  
-
 You can try structures in PDB with Hugging Face Space.  
 https://huggingface.co/spaces/yamule/SurfStampDemo
 
