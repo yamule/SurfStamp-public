@@ -6,7 +6,7 @@ Last Update 2024/12/30
 
 SurfStamp public release page 　　
 
-(Exact codes are managed as private.)　　
+The source code is managed in the private repo (because it's dirty), but it's shared on the release page.
 
 You can try structures in PDB with Hugging Face Space.  
 https://huggingface.co/spaces/yamule/SurfStampDemo
