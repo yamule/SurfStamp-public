@@ -11,10 +11,6 @@ The source code is managed in the private repo (because it's dirty), but it's sh
 You can try structures in PDB with Hugging Face Space.  
 https://huggingface.co/spaces/yamule/SurfStampDemo
 
-Some automatically processed structures are available from
-http://process.sakura.ne.jp/surfstamp/viewer/test.cgi?pdbid=3ZSJ
-. (The snapshot is a bit old which was synclonized in 2021 Jan. because the server strage is almost full.:rolling_eyes:)
-
 Please access GitHub Page for introduction.　
 https://yamule.github.io/SurfStamp-public/
 
